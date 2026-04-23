@@ -9,6 +9,8 @@ Use this plugin for:
 - directory structure and feature decomposition
 - low-debt startup guidance
 - architecture review and debt checks
+- feature bootstrap and layering
+- day-1 setup and project skeleton guidance
 
 ## Default Baseline
 - SwiftUI first
@@ -19,6 +21,13 @@ Use this plugin for:
 - URLSession typed client
 - explicit model boundaries
 - day-1 observability
+
+## Practical References
+- `stack-baseline.md`
+- `review-checklist.md`
+- `feature-patterns.md`
+- `day1-checklist.md`
+- `project-skeleton.md`
 
 ## Not Yet Covered
 - Android-specific guidance

@@ -13,14 +13,17 @@ This repository now follows a **core + adapters** model.
 This keeps the actual iOS engineering knowledge portable while allowing different agent hosts to consume it in their own preferred shape.
 
 ## Phase 1 Goal
-Phase 1 focuses on **iOS-first app development**:
+Phase 1 focuses on **iOS-first app development** from idea to App Store shipment:
+- discovery and MVP framing
 - new app architecture design
 - technical selection
 - directory structure and dependency boundaries
 - low-debt bootstrap guidance
-- architecture review
-- debt/risk checks
-- reusable delivery formats for architecture recommendations
+- feature bootstrap
+- testing strategy and tooling choices
+- architecture review and debt/risk checks
+- release / App Store publishing workflows
+- reusable delivery formats for agent output
 
 ## Future Direction
 The long-term goal is to expand into a broader **app development agent plugin** that supports more platforms. For now, this repository intentionally focuses on **iOS only** so the plugin stays sharp and useful.
@@ -49,12 +52,23 @@ This project is **not**:
 It is a **specialized agent plugin** that improves how an agent helps users develop iOS apps.
 
 ## Core Jobs This Plugin Should Help With
-1. Design a new iOS app architecture.
-2. Recommend a default tech stack with trade-offs.
-3. Propose a scalable but low-complexity directory structure.
-4. Review an existing structure or architecture.
-5. Identify technical debt and missing guardrails.
-6. Generate reusable architecture briefs and checklists.
+1. Help frame an iOS app idea into a shippable MVP.
+2. Design a new iOS app architecture.
+3. Recommend a default tech stack with trade-offs.
+4. Propose a scalable but low-complexity directory structure.
+5. Review an existing structure or architecture.
+6. Identify technical debt and missing guardrails.
+7. Help prepare release / App Store publishing workflows.
+
+## Workflow Model
+This plugin follows a three-part workflow:
+- **需求 / Discovery** — manual trigger
+- **开发 / Development** — highest automation, main leverage area
+- **发布运营 / Release & Operations** — manual trigger
+
+The design goal is to support both:
+- professional developers who want best-practice engineering help
+- solo founders / one-person companies who still need help shipping an iOS app
 
 ## Default iOS Baseline
 Unless user constraints override it, the plugin should bias toward:
@@ -96,10 +110,10 @@ claude-ios-arch/
 When an agent uses this plugin, it should generally:
 1. Choose the correct host adapter.
 2. Load `core/manifest.json`.
-3. Identify whether the request is bootstrap / review / decision / debt-check.
+3. Identify whether the request belongs to **discovery**, **development**, or **release-operations**.
 4. Load the matching command and skill.
 5. Apply rule files for consistency.
-6. Use templates for stable output shape.
+6. Use templates and golden examples for stable output shape.
 7. Optionally run hooks when reviewing codebases.
 
 ## Main Entry Points
@@ -107,14 +121,20 @@ When an agent uses this plugin, it should generally:
 - `adapters/claude-code/CLAUDE.md`
 - `adapters/codex/AGENTS.md`
 - `plugin/manifest.json`
+- `docs/WORKFLOW-MODEL.md`
+- `skills/ios-discovery/SKILL.md`
 - `skills/ios-app-bootstrap/SKILL.md`
+- `skills/ios-feature-bootstrap/SKILL.md`
+- `skills/ios-testing-strategy/SKILL.md`
+- `skills/ios-tooling-decision/SKILL.md`
 - `skills/ios-arch-review/SKILL.md`
-- `skills/ios-tech-decision/SKILL.md`
 - `skills/ios-debt-check/SKILL.md`
+- `skills/ios-release-operations/SKILL.md`
 
 ## Docs
 - `docs/INSTALL.md`
 - `docs/USAGE.md`
+- `docs/WORKFLOW-MODEL.md`
 
 ## Status
-This is a **core + adapters plugin draft** for an iOS development agent plugin.
+This is an **agent-first core + adapters plugin draft** for iOS app development.

@@ -34,11 +34,15 @@ Recommended loading order:
 6. optional templates/examples/platform guide
 
 ## Main iOS Tasks Supported
+- discovery and MVP framing
 - bootstrap a new iOS app
-- choose a stack and architecture
+- bootstrap an iOS feature
+- choose stack, tooling, and architecture
+- define a testing strategy
 - review an existing architecture
 - identify debt and missing guardrails
-- generate briefs, decision memos, and debt reports
+- prepare release / App Store workflows
+- generate briefs, decision memos, testing plans, and debt reports
 
 ## Notes
 This repository is not an MCP server. It is a host-adaptable agent plugin package for iOS development workflows.

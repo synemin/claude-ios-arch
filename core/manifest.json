@@ -7,43 +7,73 @@
   "platforms": ["ios"],
   "futurePlatforms": ["android", "flutter", "react-native"],
   "tasks": [
+    "discovery",
     "architecture-design",
     "tech-selection",
     "directory-structure",
     "bootstrap",
+    "feature-bootstrap",
     "architecture-review",
-    "debt-check"
+    "debt-check",
+    "release-operations"
   ],
   "entrypoints": {
     "rules": [
       "../rules/ios-architecture.md",
+      "../rules/ios-engineering-quality.md",
+      "../rules/ios-feature-boundaries.md",
       "../rules/ios-low-debt.md",
       "../rules/ios-tech-selection.md"
     ],
     "commands": [
+      "../commands/ios-discovery.md",
       "../commands/ios-app-bootstrap.md",
+      "../commands/ios-feature-bootstrap.md",
+      "../commands/ios-testing-strategy.md",
+      "../commands/ios-tooling-decision.md",
       "../commands/ios-arch-review.md",
       "../commands/ios-debt-check.md",
-      "../commands/ios-tech-decision.md"
+      "../commands/ios-tech-decision.md",
+      "../commands/ios-release-operations.md"
     ],
     "skills": [
+      "../skills/ios-discovery/SKILL.md",
       "../skills/ios-app-bootstrap/SKILL.md",
+      "../skills/ios-feature-bootstrap/SKILL.md",
+      "../skills/ios-testing-strategy/SKILL.md",
+      "../skills/ios-tooling-decision/SKILL.md",
       "../skills/ios-arch-review/SKILL.md",
       "../skills/ios-tech-decision/SKILL.md",
-      "../skills/ios-debt-check/SKILL.md"
+      "../skills/ios-debt-check/SKILL.md",
+      "../skills/ios-release-operations/SKILL.md"
     ],
     "hooks": [
       "../hooks/ios_arch_guard.py"
     ],
     "templates": [
+      "../templates/discovery-brief.md",
       "../templates/architecture-brief.md",
+      "../templates/feature-brief.md",
+      "../templates/testing-plan.md",
+      "../templates/tooling-decision-memo.md",
       "../templates/decision-memo.md",
-      "../templates/debt-report.md"
+      "../templates/debt-report.md",
+      "../templates/release-operations-checklist.md"
     ],
     "examples": [
       "../examples/bootstrap-request.md",
+      "../examples/feature-request.md",
       "../examples/review-request.md",
-      "../examples/decision-request.md"
+      "../examples/decision-request.md",
+      "../examples/golden-discovery-brief.md",
+      "../examples/golden-architecture-brief.md",
+      "../examples/golden-feature-brief.md",
+      "../examples/golden-testing-plan.md",
+      "../examples/golden-debt-report.md",
+      "../examples/golden-tooling-decision.md",
+      "../examples/golden-release-operations.md",
+      "../examples/journey-solo-founder.md",
+      "../examples/journey-professional-developer.md"
     ],
     "platformGuide": "../platforms/ios/guide.md"
   }
