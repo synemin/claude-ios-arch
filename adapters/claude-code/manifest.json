@@ -1,0 +1,15 @@
+{
+  "name": "claude-ios-arch-claude-code-adapter",
+  "version": "0.3.0",
+  "host": "claude-code",
+  "usesCore": "../../core/manifest.json",
+  "primaryContract": "./CLAUDE.md",
+  "tasks": [
+    "architecture-design",
+    "tech-selection",
+    "directory-structure",
+    "bootstrap",
+    "architecture-review",
+    "debt-check"
+  ]
+}

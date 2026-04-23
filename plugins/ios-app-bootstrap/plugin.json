@@ -1,26 +1,10 @@
 {
-  "name": "ios-app-bootstrap",
-  "version": "0.1.0",
-  "description": "Scaffold for agent-usable iOS architecture guidance, debt checks, and starter brief generation.",
-  "capabilities": [
-    "guidance",
-    "review",
-    "template-render",
-    "debt-check"
-  ],
+  "name": "ios-app-bootstrap-legacy",
+  "version": "0.2.0",
+  "description": "Legacy compatibility wrapper pointing to the newer agent-plugin structure for iOS app development guidance.",
+  "supersededBy": "../../plugin/manifest.json",
   "entrypoints": {
-    "skill": "../../skills/ios-app-bootstrap/SKILL.md",
-    "hooks": [
-      "../../hooks/ios_arch_guard.py"
-    ],
-    "commands": [
-      "../../commands/ios-app-bootstrap.md",
-      "../../commands/ios-arch-review.md",
-      "../../commands/ios-debt-check.md"
-    ]
-  },
-  "notes": [
-    "This is a workspace-local scaffold intended for agent use.",
-    "Adjust manifest shape if your host expects a stricter plugin schema."
-  ]
+    "manifest": "../../plugin/manifest.json",
+    "primarySkill": "../../skills/ios-app-bootstrap/SKILL.md"
+  }
 }

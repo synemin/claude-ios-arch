@@ -1,0 +1,50 @@
+{
+  "name": "ios-app-development-core",
+  "version": "0.3.0",
+  "type": "agent-plugin-core",
+  "scope": "ios-app-development",
+  "phase": "phase-1-ios-first",
+  "platforms": ["ios"],
+  "futurePlatforms": ["android", "flutter", "react-native"],
+  "tasks": [
+    "architecture-design",
+    "tech-selection",
+    "directory-structure",
+    "bootstrap",
+    "architecture-review",
+    "debt-check"
+  ],
+  "entrypoints": {
+    "rules": [
+      "../rules/ios-architecture.md",
+      "../rules/ios-low-debt.md",
+      "../rules/ios-tech-selection.md"
+    ],
+    "commands": [
+      "../commands/ios-app-bootstrap.md",
+      "../commands/ios-arch-review.md",
+      "../commands/ios-debt-check.md",
+      "../commands/ios-tech-decision.md"
+    ],
+    "skills": [
+      "../skills/ios-app-bootstrap/SKILL.md",
+      "../skills/ios-arch-review/SKILL.md",
+      "../skills/ios-tech-decision/SKILL.md",
+      "../skills/ios-debt-check/SKILL.md"
+    ],
+    "hooks": [
+      "../hooks/ios_arch_guard.py"
+    ],
+    "templates": [
+      "../templates/architecture-brief.md",
+      "../templates/decision-memo.md",
+      "../templates/debt-report.md"
+    ],
+    "examples": [
+      "../examples/bootstrap-request.md",
+      "../examples/review-request.md",
+      "../examples/decision-request.md"
+    ],
+    "platformGuide": "../platforms/ios/guide.md"
+  }
+}

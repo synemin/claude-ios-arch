@@ -1,0 +1,15 @@
+{
+  "name": "claude-ios-arch-codex-adapter",
+  "version": "0.3.0",
+  "host": "codex",
+  "usesCore": "../../core/manifest.json",
+  "primaryContract": "./AGENTS.md",
+  "tasks": [
+    "architecture-design",
+    "tech-selection",
+    "directory-structure",
+    "bootstrap",
+    "architecture-review",
+    "debt-check"
+  ]
+}
