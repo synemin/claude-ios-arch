@@ -46,9 +46,11 @@
     "commands": [
       "../commands/ios-discovery.md",
       "../commands/ios-app-bootstrap.md",
+      "../commands/ios-existing-project-adoption.md",
       "../commands/ios-feature-bootstrap.md",
       "../commands/ios-testing-strategy.md",
       "../commands/ios-tooling-decision.md",
+      "../commands/ios-environment-audit.md",
       "../commands/ios-arch-review.md",
       "../commands/ios-debt-check.md",
       "../commands/ios-tech-decision.md",
@@ -57,9 +59,11 @@
     "skills": [
       "../skills/ios-discovery/SKILL.md",
       "../skills/ios-app-bootstrap/SKILL.md",
+      "../skills/ios-existing-project-adoption/SKILL.md",
       "../skills/ios-feature-bootstrap/SKILL.md",
       "../skills/ios-testing-strategy/SKILL.md",
       "../skills/ios-tooling-decision/SKILL.md",
+      "../skills/ios-environment-audit/SKILL.md",
       "../skills/ios-arch-review/SKILL.md",
       "../skills/ios-tech-decision/SKILL.md",
       "../skills/ios-debt-check/SKILL.md",
@@ -76,6 +80,7 @@
       "../templates/tooling-decision-memo.md",
       "../templates/decision-memo.md",
       "../templates/debt-report.md",
+      "../templates/environment-audit-report.md",
       "../templates/release-operations-checklist.md"
     ],
     "examples": [
