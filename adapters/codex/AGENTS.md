@@ -22,10 +22,21 @@ Apply the host-agnostic iOS app development core in a Codex-friendly repo-instru
 7. Relevant template in `../../templates/`
 
 ## Supported Tasks
-- bootstrap a new iOS app
-- review iOS architecture
-- make iOS tech choices
-- check iOS debt
+- discovery — understand goals, constraints, and context
+- project-state-detection — detect current architecture state
+- constraint-extraction — extract tech/team/business constraints
+- architecture-design — design or recommend iOS app architecture
+- tech-selection — evaluate and choose iOS technology stack
+- directory-structure — propose feature-first directory layout
+- bootstrap — scaffold a new iOS app from scratch
+- existing-project-adoption — adopt the plugin's architecture in an existing codebase
+- feature-bootstrap — design a new feature with clean boundaries
+- feature-implementation — implement a feature in existing code with minimal-impact changes
+- architecture-review — review and score an existing architecture
+- debt-check — identify and prioritize technical debt
+- architecture-evolution — plan incremental architecture evolution
+- library-selection — evaluate and select third-party libraries
+- release-operations — pre-release audit and checklist
 
 ## Default Recommendation Bias
 - SwiftUI first

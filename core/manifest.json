@@ -20,7 +20,8 @@
     "debt-check",
     "architecture-evolution",
     "library-selection",
-    "release-operations"
+    "release-operations",
+    "feature-implementation"
   ],
   "entrypoints": {
     "rules": [
@@ -43,7 +44,8 @@
       "../commands/ios-tech-decision.md",
       "../commands/ios-architecture-evolution.md",
       "../commands/ios-library-selection.md",
-      "../commands/ios-release-operations.md"
+      "../commands/ios-release-operations.md",
+      "../commands/ios-feature-implementation.md"
     ],
     "skills": [
       "../skills/ios-discovery/SKILL.md",
@@ -58,7 +60,8 @@
       "../skills/ios-debt-check/SKILL.md",
       "../skills/ios-architecture-evolution/SKILL.md",
       "../skills/ios-library-selection/SKILL.md",
-      "../skills/ios-release-operations/SKILL.md"
+      "../skills/ios-release-operations/SKILL.md",
+      "../skills/ios-feature-implementation/SKILL.md"
     ],
     "hooks": [
       "../hooks/ios_arch_guard.py"
@@ -72,7 +75,12 @@
       "../templates/decision-memo.md",
       "../templates/debt-report.md",
       "../templates/environment-audit-report.md",
-      "../templates/release-operations-checklist.md"
+      "../templates/release-operations-checklist.md",
+      "../templates/swift/feature-view.swift.md",
+      "../templates/swift/view-model.swift.md",
+      "../templates/swift/repository.swift.md",
+      "../templates/swift/use-case.swift.md",
+      "../templates/swift/network-service.swift.md"
     ],
     "examples": [
       "../examples/bootstrap-request.md",

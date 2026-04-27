@@ -24,10 +24,21 @@ Apply these assets in order when relevant:
 7. Matching template under `../../templates/`
 
 ## Supported Task Shapes
-- new iOS app bootstrap
-- iOS architecture review
-- iOS tech decision
-- iOS debt check
+- discovery — understand the user's goals, constraints, and context
+- project-state-detection — detect the current project's architecture state
+- constraint-extraction — extract tech/team/business constraints
+- architecture-design — design or recommend iOS app architecture
+- tech-selection — evaluate and choose iOS technology stack
+- directory-structure — propose feature-first directory layout
+- bootstrap — scaffold a new iOS app from scratch
+- existing-project-adoption — adopt the plugin's architecture in an existing codebase
+- feature-bootstrap — design a new feature with clean boundaries
+- feature-implementation — implement a feature in existing code with minimal-impact changes
+- architecture-review — review and score an existing architecture
+- debt-check — identify and prioritize technical debt
+- architecture-evolution — plan incremental architecture evolution
+- library-selection — evaluate and select third-party libraries
+- release-operations — pre-release audit and checklist
 
 ## Default iOS Bias
 - SwiftUI first
