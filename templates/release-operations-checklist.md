@@ -1,13 +1,21 @@
 # Release Operations Checklist Template
 
-## Current Stage
+## Current Release Stage
 
-## TestFlight Status
+## Detected Project State
+- state:
+- why:
 
-## App Store Metadata Status
+## Release Risk Profile
 
-## Compliance / Policy Watchouts
+## Readiness Gaps
 
-## Release Checklist
+## Policy / Compliance Watchouts
 
-## Post-Launch Monitoring
+## Observability / Crash Readiness
+
+## Launch Checklist
+
+## Post-Launch Monitoring Focus
+
+## Immediate Actions

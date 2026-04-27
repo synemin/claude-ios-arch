@@ -2,7 +2,7 @@
   "name": "claude-ios-arch",
   "version": "0.3.0",
   "displayName": "Claude iOS Arch",
-  "description": "An agent plugin focused on helping users design, bootstrap, review, and evolve iOS apps with strong architecture and low technical debt.",
+  "description": "A state-aware, delivery-oriented app development plugin that helps agents build and evolve iOS apps from any project state with low debt and context-aware decisions.",
   "scope": "ios-app-development",
   "phase": "phase-1-ios-first",
   "platforms": ["ios"],
@@ -11,24 +11,33 @@
   "architecture": "core-plus-adapters",
   "tasks": [
     "discovery",
+    "project-state-detection",
+    "constraint-extraction",
     "architecture-design",
     "tech-selection",
     "directory-structure",
     "bootstrap",
+    "existing-project-adoption",
     "feature-bootstrap",
     "architecture-review",
     "debt-check",
+    "architecture-evolution",
+    "library-selection",
     "release-operations"
   ],
   "triggers": [
     "new ios app",
+    "continue this ios app",
+    "adopt this existing project",
+    "implement this ios feature",
     "ios architecture",
     "swiftui or uikit",
     "ios tech stack",
     "ios directory structure",
     "ios app bootstrap",
     "ios architecture review",
-    "ios debt check"
+    "ios debt check",
+    "should we use this library"
   ],
   "entrypoints": {
     "core": "../core/manifest.json",
@@ -54,6 +63,8 @@
       "../commands/ios-arch-review.md",
       "../commands/ios-debt-check.md",
       "../commands/ios-tech-decision.md",
+      "../commands/ios-architecture-evolution.md",
+      "../commands/ios-library-selection.md",
       "../commands/ios-release-operations.md"
     ],
     "skills": [
@@ -67,6 +78,8 @@
       "../skills/ios-arch-review/SKILL.md",
       "../skills/ios-tech-decision/SKILL.md",
       "../skills/ios-debt-check/SKILL.md",
+      "../skills/ios-architecture-evolution/SKILL.md",
+      "../skills/ios-library-selection/SKILL.md",
       "../skills/ios-release-operations/SKILL.md"
     ],
     "hooks": [
@@ -95,10 +108,23 @@
       "../examples/golden-debt-report.md",
       "../examples/golden-tooling-decision.md",
       "../examples/golden-release-operations.md",
+      "../examples/golden-existing-project-adoption.md",
+      "../examples/golden-library-selection.md",
+      "../examples/golden-architecture-evolution.md",
       "../examples/journey-solo-founder.md",
       "../examples/journey-professional-developer.md"
     ],
-    "platformGuide": "../platforms/ios/guide.md"
+    "platformGuide": "../platforms/ios/guide.md",
+    "productRequirements": "../docs/PRODUCT-REQUIREMENTS.md",
+    "referencesRegistry": "../references/registry.json",
+    "stateGuide": "../platforms/ios/state-detection.md",
+    "architectureEvolutionGuide": "../platforms/ios/architecture-evolution.md",
+    "workflows": [
+      "../workflows/docs-refresh.md",
+      "../workflows/reference-review.md",
+      "../workflows/skill-regeneration.md",
+      "../workflows/release-audit.md"
+    ]
   },
   "nonGoals": [
     "mcp-server",

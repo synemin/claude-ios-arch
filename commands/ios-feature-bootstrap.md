@@ -10,17 +10,20 @@ Use when the user wants to add or design a new feature inside an iOS app with cl
 - whether the feature is read-only, transactional, or stateful
 
 ## Agent Workflow
-1. Clarify the feature goal and core user flow.
-2. Identify presentation, domain, and data responsibilities.
-3. Propose a feature-local directory structure.
-4. Define models, use cases, repositories, and side-effect boundaries.
+1. Detect current project state and architecture constraints.
+2. Clarify the feature goal and smallest useful slice.
+3. Identify presentation, domain, and data responsibilities in a way that fits the current app.
+4. Reuse the current navigation, state, networking, and persistence baseline unless change is justified.
 5. Identify observability requirements: logging, analytics, errors.
-6. Recommend the smallest viable implementation slice.
+6. Recommend the first safe implementation slice.
+7. Call out architecture upgrade triggers if this feature exposes a deeper mismatch.
 
 ## Output Format
 - Feature summary
+- Detected project state and constraints
 - Responsibilities by layer
 - Suggested file/module structure
 - State/data flow
 - Risks and guardrails
 - First implementation slice
+- Upgrade triggers

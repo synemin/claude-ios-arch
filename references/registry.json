@@ -1,0 +1,205 @@
+{
+  "sources": [
+    {
+      "id": "apple-swiftui",
+      "topic": "swiftui",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/swiftui",
+      "priority": "high",
+      "reviewCadenceDays": 30,
+      "ownedReferences": [
+        "references/apple/swiftui-baseline.md",
+        "references/apple/observation-state-model.md",
+        "references/apple/navigation-patterns.md"
+      ]
+    },
+    {
+      "id": "apple-swift-concurrency",
+      "topic": "concurrency",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/swift",
+      "priority": "high",
+      "reviewCadenceDays": 30,
+      "ownedReferences": [
+        "references/apple/concurrency-guidelines.md"
+      ]
+    },
+    {
+      "id": "apple-urlsession",
+      "topic": "networking",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/foundation/urlsession",
+      "priority": "high",
+      "reviewCadenceDays": 45,
+      "ownedReferences": [
+        "references/apple/urlsession-networking.md"
+      ]
+    },
+    {
+      "id": "apple-swiftdata",
+      "topic": "persistence",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/swiftdata",
+      "priority": "high",
+      "reviewCadenceDays": 45,
+      "ownedReferences": [
+        "references/apple/swiftdata-vs-coredata.md"
+      ]
+    },
+    {
+      "id": "apple-testing",
+      "topic": "testing",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/testing",
+      "priority": "high",
+      "reviewCadenceDays": 30,
+      "ownedReferences": [
+        "references/apple/xctest-vs-swift-testing.md"
+      ]
+    },
+    {
+      "id": "apple-performance",
+      "topic": "performance",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/xcode/improving_your_app_s_performance",
+      "priority": "medium",
+      "reviewCadenceDays": 90,
+      "ownedReferences": [
+        "references/apple/performance-baseline.md"
+      ]
+    },
+    {
+      "id": "apple-accessibility",
+      "topic": "accessibility",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/accessibility/",
+      "priority": "medium",
+      "reviewCadenceDays": 90,
+      "ownedReferences": [
+        "references/apple/accessibility-baseline.md"
+      ]
+    },
+    {
+      "id": "apple-backgroundtasks",
+      "topic": "background-work",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/backgroundtasks",
+      "priority": "medium",
+      "reviewCadenceDays": 90,
+      "ownedReferences": [
+        "references/apple/background-work.md"
+      ]
+    },
+    {
+      "id": "apple-modularization",
+      "topic": "modularization",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/xcode/organizing_your_code_with_local_packages",
+      "priority": "medium",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/apple/modularization-timing.md"
+      ]
+    },
+    {
+      "id": "apple-observability",
+      "topic": "observability",
+      "kind": "official-doc",
+      "url": "https://developer.apple.com/documentation/os",
+      "priority": "medium",
+      "reviewCadenceDays": 90,
+      "ownedReferences": [
+        "references/apple/observability-baseline.md"
+      ]
+    },
+    {
+      "id": "tuist-official",
+      "topic": "tooling",
+      "kind": "official-doc",
+      "url": "https://docs.tuist.io/",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/tuist-evaluation.md"
+      ]
+    },
+    {
+      "id": "alamofire-official",
+      "topic": "networking-library",
+      "kind": "official-doc",
+      "url": "https://github.com/Alamofire/Alamofire",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/alamofire-evaluation.md"
+      ]
+    },
+    {
+      "id": "kingfisher-official",
+      "topic": "image-loading",
+      "kind": "official-doc",
+      "url": "https://github.com/onevcat/Kingfisher",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/kingfisher-evaluation.md",
+        "references/libraries/image-loading-decision.md"
+      ]
+    },
+    {
+      "id": "realm-official",
+      "topic": "persistence-library",
+      "kind": "official-doc",
+      "url": "https://github.com/realm/realm-swift",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/realm-evaluation.md"
+      ]
+    },
+    {
+      "id": "firebase-analytics-official",
+      "topic": "analytics-library",
+      "kind": "official-doc",
+      "url": "https://firebase.google.com/docs/analytics",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/firebase-analytics-evaluation.md"
+      ]
+    },
+    {
+      "id": "crash-reporting-official",
+      "topic": "crash-reporting",
+      "kind": "official-doc",
+      "url": "https://firebase.google.com/docs/crashlytics",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/crash-reporting-evaluation.md"
+      ]
+    },
+    {
+      "id": "swiftgen-official",
+      "topic": "resource-generation",
+      "kind": "official-doc",
+      "url": "https://github.com/SwiftGen/SwiftGen",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/swiftgen-evaluation.md"
+      ]
+    },
+    {
+      "id": "xcodegen-vs-tuist",
+      "topic": "project-generation",
+      "kind": "official-doc",
+      "url": "https://github.com/yonaskolb/XcodeGen",
+      "priority": "low",
+      "reviewCadenceDays": 120,
+      "ownedReferences": [
+        "references/libraries/xcodegen-vs-tuist.md"
+      ]
+    }
+  ]
+}

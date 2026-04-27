@@ -17,6 +17,10 @@ Current heuristic checks:
 - catch-all Utils/Helpers/Common directories
 - oversized ViewModel classes
 - missing feature-first structure hints in larger repos
+- likely singleton sprawl
+- missing composition root hints in larger repos
+- weak observability signal in larger repos
+- callback-heavy async legacy signal
 """
 
 from __future__ import annotations
@@ -25,13 +29,17 @@ import re
 import sys
 
 FORBIDDEN_DIRS = {'Utils', 'Helpers', 'Common'}
-GENERIC_TYPE_PATTERNS = [r'\b\w+Manager\b', r'\b\w+Helper\b', r'\b\w+Util\b']
+GENERIC_TYPE_PATTERNS = [r'\w+Manager', r'\w+Helper', r'\w+Util']
 PRESENTATION_HINTS = ('View.swift', 'ViewController.swift', 'ViewModel.swift')
 VIEW_ONLY_HINTS = ('View.swift', 'ViewController.swift')
 NETWORK_HINTS = ('URLSession', '.dataTask', '.upload', '.download', 'Alamofire')
 DTO_HINT = 'DTO'
 FEATURE_DIR_NAMES = {'Features', 'Feature'}
 VIEWMODEL_SIZE_LINES = 250
+LOGGING_HINTS = ('Logger(', 'os_log', 'OSLog', 'Crashlytics', 'SentrySDK', 'analytics.track', 'logEvent(')
+COMPOSITION_ROOT_HINTS = ('AppEnvironment', 'AppBootstrap', 'DependencyContainer', 'CompositionRoot')
+CALLBACK_HINTS = ('completion:', '@escaping', 'DispatchQueue.main.async')
+SINGLETON_HINT = '.shared'
 
 
 def add_finding(findings, severity, code, path, message):
@@ -51,6 +59,9 @@ def scan_file(path: pathlib.Path, findings):
         for m in re.finditer(patt, text):
             add_finding(findings, 'S2', 'generic-name', path, f'generic type name {m.group(0)}')
 
+    if text.count(SINGLETON_HINT) >= 3:
+        add_finding(findings, 'S2', 'singleton-sprawl', path, 'multiple .shared usages suggest singleton-heavy design')
+
     if any(path.name.endswith(h) for h in PRESENTATION_HINTS):
         if DTO_HINT in text:
             sev = 'S1' if any(path.name.endswith(h) for h in VIEW_ONLY_HINTS) else 'S2'
@@ -62,12 +73,17 @@ def scan_file(path: pathlib.Path, findings):
     if path.name.endswith('ViewModel.swift') and len(lines) > VIEWMODEL_SIZE_LINES:
         add_finding(findings, 'S2', 'oversized-viewmodel', path, f'ViewModel has {len(lines)} lines (> {VIEWMODEL_SIZE_LINES})')
 
+    if sum(text.count(h) for h in CALLBACK_HINTS) >= 5:
+        add_finding(findings, 'S3', 'callback-heavy', path, 'file shows many callback-era async hints; review concurrency migration needs')
+
 
 def main():
     root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '.')
     findings = []
     swift_files = 0
     feature_dir_present = False
+    composition_root_present = False
+    observability_hits = 0
 
     for p in root.rglob('*'):
         if p.is_dir() and p.name in FEATURE_DIR_NAMES:
@@ -76,10 +92,20 @@ def main():
             add_finding(findings, 'S2', 'catch-all-dir', p, 'catch-all directory detected')
         if p.is_file() and p.suffix == '.swift':
             swift_files += 1
+            text = p.read_text(errors='ignore')
+            if any(h in text or p.name.startswith(h) for h in COMPOSITION_ROOT_HINTS):
+                composition_root_present = True
+            observability_hits += sum(text.count(h) for h in LOGGING_HINTS)
             scan_file(p, findings)
 
     if swift_files >= 20 and not feature_dir_present:
         add_finding(findings, 'S3', 'no-feature-root', root, 'larger Swift repo without obvious feature-first root detected')
+
+    if swift_files >= 20 and not composition_root_present:
+        add_finding(findings, 'S3', 'no-composition-root-signal', root, 'larger Swift repo without obvious bootstrap/composition-root signal detected')
+
+    if swift_files >= 20 and observability_hits == 0:
+        add_finding(findings, 'S3', 'weak-observability-signal', root, 'larger Swift repo without obvious logging/analytics/crash signal detected')
 
     if findings:
         print('iOS architecture guard findings:')

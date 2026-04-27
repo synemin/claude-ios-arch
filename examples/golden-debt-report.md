@@ -1,23 +1,40 @@
 # Golden Example: Debt Report
 
+## Detected Project State
+- state: legacy-rescue
+- why: the app is shipping, but core flows show singleton-heavy access, large view models, shared-folder sprawl, and presentation-layer side effects.
+
 ## Structural Debt
-- DTOs are referenced directly from multiple SwiftUI Views.
-- Auth and onboarding share one oversized repository with mixed concerns.
+- multiple `.shared` access points across feature code
+- network calls appearing in presentation-adjacent files
+- DTOs leaking into UI state models
 
 ## Tactical Debt
-- A temporary SessionManager owns logging, analytics, and token refresh in one class.
+- duplicated mapping logic in two features
+- ad-hoc error presentation with inconsistent user messaging
 
 ## Missing Guardrails
-- No explicit debt register
-- No crash reporting
-- No feature flags
+- no explicit mapping boundary rule
+- no observability baseline on critical save / sync flows
+- no composition-root convention visible in the repo
 
-## Recommended Repayment Order
-1. stop DTO leakage by adding mapping at repository boundary
-2. split auth vs onboarding repository responsibilities
-3. contain SessionManager responsibilities
-4. add observability baseline
+## Evidence / Signals
+- oversized view models
+- catch-all shared directories
+- repeated callback-era async patterns
 
-## Acceptable To Leave Alone For Now
-- local file naming inconsistencies
-- small shared helper files with narrow scope
+## Containment Plan
+- stop new singleton spread first
+- isolate networking into existing data layer seams
+- introduce one mapping convention and apply it to new work immediately
+
+## Repayment Priority
+1. presentation side effects
+2. DTO leakage
+3. singleton sprawl
+4. shared-folder cleanup
+
+## What Can Wait Safely
+- aesthetic renames
+- deeper modularization
+- broad folder reshuffles without delivery leverage

@@ -13,14 +13,16 @@ Development workflow. High automation is acceptable.
 - How do we test SwiftUI features without over-investing?
 
 ## Agent Workflow
-1. Identify product stage and team constraints.
+1. Detect current project state and risk profile.
 2. Identify critical business flows and failure surfaces.
 3. Separate domain logic, integration boundaries, and UI-critical paths.
-4. Recommend the smallest testing strategy that protects delivery.
-5. Call out what not to test yet.
+4. Apply the testing scorecard.
+5. Recommend the smallest testing strategy that protects delivery.
+6. Call out what not to test yet.
 
 ## Output Format
 - context assumptions
+- detected project state and risk profile
 - testing priorities
 - unit-test targets
 - integration-test targets

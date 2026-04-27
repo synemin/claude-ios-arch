@@ -1,0 +1,14 @@
+{
+  "topics": [
+    "ui-architecture",
+    "state-management",
+    "navigation",
+    "networking",
+    "persistence",
+    "dependency-injection",
+    "testing",
+    "observability",
+    "third-party-libraries",
+    "architecture-evolution"
+  ]
+}

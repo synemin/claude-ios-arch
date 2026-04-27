@@ -5,22 +5,29 @@ Use when the user wants a recommendation between iOS technologies, frameworks, o
 
 ## Typical Questions
 - SwiftUI or UIKit?
-- async/await or Combine?
-- SwiftData or GRDB or Core Data?
-- MVVM or TCA?
+- async/await or older async styles?
+- SwiftData or Core Data?
+- local state or richer coordination?
+- initializer injection or heavier DI?
 - single target or modularized?
 
 ## Agent Workflow
-1. Identify the actual product/problem context.
-2. Default to the simplest viable choice.
-3. Explain trade-offs, failure modes, migration cost, and team fit.
-4. Give a direct recommendation first.
-5. Separate default advice from exceptions.
+1. Detect current project state.
+2. Identify the actual decision topic.
+3. Extract constraints and lock-in factors.
+4. Check the official baseline first.
+5. Apply the relevant scorecard.
+6. Give a direct recommendation first.
+7. Explain trade-offs, failure modes, migration cost, and team fit.
+8. Separate current recommendation from future upgrade triggers.
 
 ## Output Format
 - Context assumptions
-- Default recommendation
-- Why it wins by default
+- Detected project state and constraints
+- Official baseline
+- Options considered
+- Recommendation
+- Trade-offs
 - When to deviate
 - Migration/rollback cost
 - Confidence level

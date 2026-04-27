@@ -5,13 +5,17 @@ description: Review existing iOS app architectures, directory structures, layeri
 
 # iOS Architecture Review
 
-Use this skill when the user already has an iOS structure, architecture, or codebase and wants staff-level review.
+Use this skill when the user already has an iOS structure, architecture, or codebase and wants a staff-level review.
+
+## Core Operating Rule
+Review the app against its **current project state and delivery reality**, not against an idealized greenfield architecture.
 
 ## Review Goals
-- Identify structural risks.
-- Identify maintainability drag.
-- Separate severe issues from stylistic preferences.
-- Prefer incremental fixes over rewrites.
+- identify structural risks
+- identify maintainability drag
+- separate severe issues from stylistic preferences
+- prefer incremental fixes over rewrites
+- detect whether the app is suffering from architecture drift or broader legacy-rescue conditions
 
 ## Review Dimensions
 - feature boundaries
@@ -22,17 +26,30 @@ Use this skill when the user already has an iOS structure, architecture, or code
 - shared/common folder hygiene
 - observability coverage
 - team cognitive load
+- migration feasibility
+
+## Default Workflow
+1. Detect the current project state.
+2. Summarize current architecture pattern and operating constraints.
+3. Review using boundary, state, dependency, and observability criteria.
+4. Classify issues into structural risk, maintainability drag, and optional/style.
+5. Recommend the smallest high-leverage fixes first.
+6. If needed, identify architecture evolution triggers instead of proposing a full rewrite.
 
 ## Output Shape
 1. Current architecture summary
-2. Top risks
-3. What to keep
-4. What to change now
-5. What to postpone
-6. Suggested migration sequence
+2. Detected project state and why
+3. Top risks
+4. What to keep
+5. What to change now
+6. What to postpone
+7. Suggested migration sequence
 
 ## References
 Read when needed:
-- `../ios-app-bootstrap/references/tech-stack.md`
-- `../ios-app-bootstrap/references/debt-guardrails.md`
+- `../../platforms/ios/state-detection.md`
+- `../../platforms/ios/architecture-evolution.md`
 - `../../platforms/ios/review-checklist.md`
+- `../../references/apple/observation-state-model.md`
+- `../../references/policies/third-party-adoption-policy.md`
+- `../ios-app-bootstrap/references/debt-guardrails.md`

@@ -6,9 +6,28 @@
 - Complexity:
 - Timeline:
 
+## Detected Project State
+- state:
+- why:
+
+## Constraints
+- current stack:
+- delivery pressure:
+- lock-in:
+- notable requirements:
+
+## Official Baseline
+
 ## Recommended Baseline
 
 ## Tech Selection and Trade-offs
+
+## Scorecard Notes
+- state management:
+- navigation:
+- networking:
+- persistence:
+- dependency injection:
 
 ## Directory Structure
 

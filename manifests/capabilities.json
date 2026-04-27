@@ -1,0 +1,31 @@
+{
+  "phase": "phase-1-ios-first",
+  "productGoal": "state-aware delivery-oriented app development plugin",
+  "currentPlatforms": [
+    "ios"
+  ],
+  "futurePlatforms": [
+    "android"
+  ],
+  "capabilities": [
+    "project-state-detection",
+    "constraint-extraction",
+    "greenfield-bootstrap",
+    "existing-project-adoption",
+    "feature-delivery-guidance",
+    "architecture-review",
+    "debt-detection",
+    "architecture-evolution",
+    "tech-selection",
+    "third-party-library-selection",
+    "official-doc-reference-layer",
+    "knowledge-refresh-workflow"
+  ],
+  "qualityBar": [
+    "official-source-aligned",
+    "context-aware",
+    "incremental-by-default",
+    "low-debt",
+    "delivery-oriented"
+  ]
+}

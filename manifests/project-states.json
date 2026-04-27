@@ -1,0 +1,32 @@
+{
+  "states": [
+    {
+      "id": "greenfield",
+      "description": "No app exists yet or only a skeleton exists."
+    },
+    {
+      "id": "bootstrap-in-progress",
+      "description": "App foundation exists but baseline architecture is still fluid."
+    },
+    {
+      "id": "feature-on-existing",
+      "description": "A feature must be added to an active codebase."
+    },
+    {
+      "id": "legacy-rescue",
+      "description": "The codebase has structural debt or unclear boundaries."
+    },
+    {
+      "id": "architecture-drift",
+      "description": "The original structure exists but has degraded through ad-hoc changes."
+    },
+    {
+      "id": "pre-release-hardening",
+      "description": "The app is nearing release and stability matters most."
+    },
+    {
+      "id": "migration-window",
+      "description": "A deliberate platform, tooling, or architecture migration is underway."
+    }
+  ]
+}

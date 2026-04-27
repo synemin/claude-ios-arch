@@ -2,6 +2,14 @@
 
 ## Context
 
+## Detected Project State
+- state:
+- why:
+
+## Risk Profile
+
+## Official Baseline
+
 ## Testing Priorities
 
 ## Unit Test Targets

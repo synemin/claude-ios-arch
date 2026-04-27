@@ -1,11 +1,19 @@
 # Debt Report Template
 
+## Detected Project State
+- state:
+- why:
+
 ## Structural Debt
 
 ## Tactical Debt
 
 ## Missing Guardrails
 
-## Recommended Repayment Order
+## Evidence / Signals
 
-## Acceptable To Leave Alone For Now
+## Containment Plan
+
+## Repayment Priority
+
+## What Can Wait Safely
