@@ -5,8 +5,14 @@
   "description": "A state-aware, delivery-oriented app development plugin that helps agents build and evolve iOS apps from any project state with low debt and context-aware decisions.",
   "scope": "ios-app-development",
   "phase": "phase-1-ios-first",
-  "platforms": ["ios"],
-  "futurePlatforms": ["android", "flutter", "react-native"],
+  "platforms": [
+    "ios"
+  ],
+  "futurePlatforms": [
+    "android",
+    "flutter",
+    "react-native"
+  ],
   "pluginType": "agent-plugin",
   "architecture": "core-plus-adapters",
   "tasks": [
@@ -19,11 +25,18 @@
     "bootstrap",
     "existing-project-adoption",
     "feature-bootstrap",
+    "feature-implementation",
     "architecture-review",
     "debt-check",
     "architecture-evolution",
     "library-selection",
-    "release-operations"
+    "release-operations",
+    "plugin-installation",
+    "capability-routing",
+    "documentation-lookup",
+    "lsp-source-intelligence",
+    "review-quality-gates",
+    "plugin-maintenance"
   ],
   "triggers": [
     "new ios app",
@@ -37,7 +50,13 @@
     "ios app bootstrap",
     "ios architecture review",
     "ios debt check",
-    "should we use this library"
+    "should we use this library",
+    "install ios plugin for claude code",
+    "install ios plugin for codex",
+    "context7 ios docs",
+    "ios lsp review",
+    "ios plugin operations",
+    "plugin capability routing"
   ],
   "entrypoints": {
     "core": "../core/manifest.json",
@@ -57,6 +76,7 @@
       "../commands/ios-app-bootstrap.md",
       "../commands/ios-existing-project-adoption.md",
       "../commands/ios-feature-bootstrap.md",
+      "../commands/ios-feature-implementation.md",
       "../commands/ios-testing-strategy.md",
       "../commands/ios-tooling-decision.md",
       "../commands/ios-environment-audit.md",
@@ -72,6 +92,7 @@
       "../skills/ios-app-bootstrap/SKILL.md",
       "../skills/ios-existing-project-adoption/SKILL.md",
       "../skills/ios-feature-bootstrap/SKILL.md",
+      "../skills/ios-feature-implementation/SKILL.md",
       "../skills/ios-testing-strategy/SKILL.md",
       "../skills/ios-tooling-decision/SKILL.md",
       "../skills/ios-environment-audit/SKILL.md",
@@ -80,7 +101,8 @@
       "../skills/ios-debt-check/SKILL.md",
       "../skills/ios-architecture-evolution/SKILL.md",
       "../skills/ios-library-selection/SKILL.md",
-      "../skills/ios-release-operations/SKILL.md"
+      "../skills/ios-release-operations/SKILL.md",
+      "../skills/ios-plugin-operations/SKILL.md"
     ],
     "hooks": [
       "../hooks/ios_arch_guard.py"
@@ -123,7 +145,17 @@
       "../workflows/docs-refresh.md",
       "../workflows/reference-review.md",
       "../workflows/skill-regeneration.md",
-      "../workflows/release-audit.md"
+      "../workflows/release-audit.md",
+      "../scripts/audit_plugin_framework.py"
+    ],
+    "docs": [
+      "../docs/PLUGIN-ARCHITECTURE-FRAMEWORK.md"
+    ],
+    "manifests": [
+      "../manifests/plugin-framework.json"
+    ],
+    "scripts": [
+      "../scripts/setup_plugin.py"
     ]
   },
   "nonGoals": [

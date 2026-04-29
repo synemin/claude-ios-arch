@@ -14,12 +14,19 @@ Apply the host-agnostic iOS app development core in a Codex-friendly repo-instru
 
 ## Load Order
 1. `../../core/manifest.json`
-2. `../../rules/ios-architecture.md`
-3. `../../rules/ios-low-debt.md`
-4. `../../rules/ios-tech-selection.md`
-5. Relevant command in `../../commands/`
-6. Relevant skill in `../../skills/`
-7. Relevant template in `../../templates/`
+2. `../../skills/ios-plugin-operations/SKILL.md` for install, capability routing, Context7/MCP docs, LSP, review gates, or plugin maintenance
+3. `../../rules/ios-architecture.md`
+4. `../../rules/ios-low-debt.md`
+5. `../../rules/ios-tech-selection.md`
+6. Relevant command in `../../commands/`
+7. Relevant skill in `../../skills/`
+8. Relevant template in `../../templates/`
+
+## Capability Use
+- Use Context7/MCP documentation lookup when configured and the decision depends on current Apple/Swift/library API behavior.
+- Use SourceKit/LSP diagnostics when available before broad refactors, symbol moves, or API-sensitive fixes.
+- Use build/test/lint/format and `hooks/ios_arch_guard.py` as evidence before claiming implementation success.
+- Ask before installing MCP servers, global tools, signing/provisioning assets, or publishing externally.
 
 ## Supported Tasks
 - discovery — understand goals, constraints, and context
@@ -37,6 +44,10 @@ Apply the host-agnostic iOS app development core in a Codex-friendly repo-instru
 - architecture-evolution — plan incremental architecture evolution
 - library-selection — evaluate and select third-party libraries
 - release-operations — pre-release audit and checklist
+- plugin-installation — install/package the plugin for Claude Code or Codex
+- documentation-lookup — use Context7/MCP or official fetch paths for current docs
+- lsp-source-intelligence — use SourceKit/LSP diagnostics and symbol intelligence when available
+- plugin-maintenance — update manifests, adapters, skills, commands, references, and readiness checks together
 
 ## Default Recommendation Bias
 - SwiftUI first

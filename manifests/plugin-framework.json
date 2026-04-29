@@ -1,0 +1,77 @@
+{
+  "name": "claude-ios-arch-plugin-framework",
+  "version": "0.1.0",
+  "layers": [
+    {
+      "id": "host-packaging",
+      "required": [
+        "docs/INSTALL.md",
+        "adapters/claude-code/CLAUDE.md",
+        "adapters/codex/AGENTS.md",
+        "skills/ios-plugin-operations/SKILL.md",
+        "scripts/setup_plugin.py"
+      ]
+    },
+    {
+      "id": "capability-routing",
+      "required": [
+        "plugin/manifest.json",
+        "core/manifest.json",
+        "manifests/capabilities.json",
+        "skills/ios-plugin-operations/references/capability-routing.md"
+      ]
+    },
+    {
+      "id": "knowledge-docs",
+      "required": [
+        "references/registry.json",
+        "workflows/docs-refresh.md",
+        "workflows/reference-review.md",
+        "docs/RESEARCH-WORKFLOW.md"
+      ]
+    },
+    {
+      "id": "source-intelligence",
+      "required": [
+        "skills/ios-environment-audit/SKILL.md",
+        "hooks/ios_arch_guard.py",
+        "platforms/ios/tooling-decision-matrix.md"
+      ]
+    },
+    {
+      "id": "development-pipeline",
+      "required": [
+        "docs/DEVELOPMENT-WORKFLOW-BLUEPRINT.md",
+        "skills/ios-feature-implementation/SKILL.md",
+        "skills/ios-existing-project-adoption/SKILL.md"
+      ]
+    },
+    {
+      "id": "code-output-patterns",
+      "required": [
+        "templates/swift/feature-view.swift.md",
+        "templates/swift/view-model.swift.md",
+        "templates/swift/use-case.swift.md",
+        "templates/swift/repository.swift.md"
+      ]
+    },
+    {
+      "id": "review-verification",
+      "required": [
+        "skills/ios-arch-review/SKILL.md",
+        "skills/ios-debt-check/SKILL.md",
+        "platforms/ios/review-checklist.md",
+        "platforms/ios/review-severity-model.md"
+      ]
+    },
+    {
+      "id": "evolution-maintenance",
+      "required": [
+        "skills/ios-architecture-evolution/SKILL.md",
+        "workflows/skill-regeneration.md",
+        "workflows/release-audit.md",
+        "scripts/audit_plugin_readiness.py"
+      ]
+    }
+  ]
+}

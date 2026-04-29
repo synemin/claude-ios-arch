@@ -19,7 +19,13 @@
     "tech-selection",
     "third-party-library-selection",
     "official-doc-reference-layer",
-    "knowledge-refresh-workflow"
+    "knowledge-refresh-workflow",
+    "host-installation-and-packaging",
+    "capability-routing",
+    "context7-documentation-lookup",
+    "lsp-source-intelligence",
+    "review-quality-gates",
+    "plugin-maintenance"
   ],
   "qualityBar": [
     "official-source-aligned",

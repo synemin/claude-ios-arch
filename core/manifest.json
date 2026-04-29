@@ -4,8 +4,14 @@
   "type": "agent-plugin-core",
   "scope": "ios-app-development",
   "phase": "phase-1-ios-first",
-  "platforms": ["ios"],
-  "futurePlatforms": ["android", "flutter", "react-native"],
+  "platforms": [
+    "ios"
+  ],
+  "futurePlatforms": [
+    "android",
+    "flutter",
+    "react-native"
+  ],
   "tasks": [
     "discovery",
     "project-state-detection",
@@ -21,7 +27,13 @@
     "architecture-evolution",
     "library-selection",
     "release-operations",
-    "feature-implementation"
+    "feature-implementation",
+    "plugin-installation",
+    "capability-routing",
+    "documentation-lookup",
+    "lsp-source-intelligence",
+    "review-quality-gates",
+    "plugin-maintenance"
   ],
   "entrypoints": {
     "rules": [
@@ -61,7 +73,8 @@
       "../skills/ios-architecture-evolution/SKILL.md",
       "../skills/ios-library-selection/SKILL.md",
       "../skills/ios-release-operations/SKILL.md",
-      "../skills/ios-feature-implementation/SKILL.md"
+      "../skills/ios-feature-implementation/SKILL.md",
+      "../skills/ios-plugin-operations/SKILL.md"
     ],
     "hooks": [
       "../hooks/ios_arch_guard.py"
@@ -109,7 +122,17 @@
       "../workflows/docs-refresh.md",
       "../workflows/reference-review.md",
       "../workflows/skill-regeneration.md",
-      "../workflows/release-audit.md"
+      "../workflows/release-audit.md",
+      "../scripts/audit_plugin_framework.py"
+    ],
+    "docs": [
+      "../docs/PLUGIN-ARCHITECTURE-FRAMEWORK.md"
+    ],
+    "manifests": [
+      "../manifests/plugin-framework.json"
+    ],
+    "scripts": [
+      "../scripts/setup_plugin.py"
     ]
   }
 }
